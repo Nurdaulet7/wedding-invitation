@@ -25,11 +25,12 @@
   position: absolute;
   inset: 0;
   z-index: 1;
+  // Низ — тот же $color-background, что у следующей секции (Hosts), без «мутной» кромки
   background: linear-gradient(
     to bottom,
-    transparent 40%,
-    rgba(253, 248, 243, 0.3) 65%,
-    rgba(253, 248, 243, 0.92) 100%
+    transparent 36%,
+    color-mix(in srgb, $color-background 28%, transparent) 58%,
+    $color-background 100%
   );
 }
 

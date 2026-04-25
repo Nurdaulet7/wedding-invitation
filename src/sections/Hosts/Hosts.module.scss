@@ -1,0 +1,95 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@mixin reveal($delay: 0ms) {
+  opacity: 0;
+  [data-visible="true"] & {
+    animation: reveal-up 700ms $ease-out $delay forwards;
+  }
+}
+
+// ─── Section ──────────────────────────────────────────────────────────────────
+.section {
+  width: 100%;
+  padding-block: $space-xl;
+  background-color: $color-background;
+}
+
+.container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-lg;
+}
+
+// ─── Ornaments ────────────────────────────────────────────────────────────────
+.ornTop,
+.ornBottom {
+  width: 100%;
+  max-width: 110px;
+  height: auto;
+  opacity: 0.55;
+  color: $color-primary;
+}
+
+.ornTop {
+  @include reveal(0ms);
+}
+
+.ornBottom {
+  @include reveal(400ms);
+}
+
+// ─── Body ─────────────────────────────────────────────────────────────────────
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-md;
+  text-align: center;
+}
+
+.label {
+  @include reveal(100ms);
+  font-family: $font-display;
+  font-weight: $font-weight-regular;
+  font-size: 2rem;
+  color: $color-text;
+}
+
+.names {
+  @include reveal(200ms);
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.name {
+  font-family: $font-display;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 1.1;
+  color: $color-text;
+}
+
+.divider {
+  font-family: $font-display;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 1.1;
+  color: $color-text;
+}

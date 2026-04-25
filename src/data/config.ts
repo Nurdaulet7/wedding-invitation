@@ -42,6 +42,11 @@ export const config = {
     descriptionEn: "Soft pastel tones",
   },
 
+  hosts: {
+    father: "Арман",
+    mother: "Сәуле",
+  },
+
   invite: {
     greeting: "Құрметті қонақтар!",
     brideName: "Аяулымның",

@@ -1,9 +1,14 @@
-Create ONLY the Toy Ieleri (hosts) section. Content-height.
+Create ONLY the RSVP section. Content-height.
 
- Scroll reveal animation.
+Тойға келетініңізді растауыңызды сұраймыз!
 
-ТОЙ ИЕЛЕРІ:
-[Father name] - [Mother name]
+Form fields:
+- Есіміңіз (name input)
+- Неше адам келеді? (number input)
+- Radio: Келемін / Өкінішке орай, қатыса алмаймын
+- Button: Жіберу
 
-All text from config.ts. Show me only this section.
-используй орнаменты top bottom 
+On submit — send data to Telegram bot via Telegram Bot API.
+After success: "Рахмет! Сіздің жауабыңыз қабылданды"
+
+Floral frame around form. Scroll reveal animation. All data from config.ts. Show me only this section.
