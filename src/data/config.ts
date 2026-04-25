@@ -35,8 +35,8 @@ export const config = {
     phone: "", // WhatsApp / phone number
     formLink: "", // Google Form or custom form link
     telegram: {
-      botToken: import.meta.env.VITE_TELEGRAM_BOT_TOKEN as string ?? "",
-      chatId: import.meta.env.VITE_TELEGRAM_CHAT_ID as string ?? "",
+      botToken: (import.meta.env.VITE_TELEGRAM_BOT_TOKEN as string) ?? "",
+      chatId: (import.meta.env.VITE_TELEGRAM_CHAT_ID as string) ?? "",
     },
   },
 
@@ -56,6 +56,14 @@ export const config = {
     brideName: "Аяулымның",
     body: "Сіздерді аяулы қызымыз\nАминаның\nАта-ананың аялы алақанынан Ақ босағасына шығарып салуға арналған салтанатты дастарханымыздың қадірлі қонағы болуға шақырамыз!",
   },
+
+  gallery: [
+    "/gallery/photo1.png",
+    "/gallery/photo2.png",
+    "/gallery/photo3.png",
+    "/gallery/photo4.png",
+    // добавляй сюда пути к фото в папке public/gallery/
+  ],
 
   meta: {
     title: "Айдана & Арман — Үйлену тойы",

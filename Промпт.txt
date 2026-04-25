@@ -1,14 +1,1 @@
-Create ONLY the RSVP section. Content-height.
-
-Тойға келетініңізді растауыңызды сұраймыз!
-
-Form fields:
-- Есіміңіз (name input)
-- Неше адам келеді? (number input)
-- Radio: Келемін / Өкінішке орай, қатыса алмаймын
-- Button: Жіберу
-
-On submit — send data to Telegram bot via Telegram Bot API.
-After success: "Рахмет! Сіздің жауабыңыз қабылданды"
-
-Floral frame around form. Scroll reveal animation. All data from config.ts. Show me only this section.
+в конце сайта сделай надпись типа Келіңіздер, тойымыздың қадірлі қонағы болыңыздар! и оформление какое то и снизу футер с надписом Для заказа сайта-приглашения на ваше мероприяте переходите в instagram или whatsapp! и иконка фатсаппа и номер +7 777 175 82 28
