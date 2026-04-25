@@ -1,0 +1,6 @@
+Create ONLY the Hero section. Full viewport height (100vh).
+
+Bride's photo as full background. Bride's name at the bottom over the photo with a light gradient overlay. Subtitle "Аяулым 
+Қыз ұзату" below the name. Scroll indicator at the bottom. и еще кнопка для вкл выкл музыки 
+
+All text from config.ts. Show me only this section — nothing else.
