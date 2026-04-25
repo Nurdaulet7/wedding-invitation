@@ -23,10 +23,10 @@ export const config = {
     timeDisplay: "17:00",
 
     venue: {
-      name: "Grand Hall",
+      name: "Grand Hall мейрамханасы",
       address: "Алматы қ., Абай д., 1",
       addressEn: "Almaty, Abay ave., 1",
-      mapLink: "", // Google Maps / 2GIS link
+      mapLink: "https://2gis.kz", // замени на реальную ссылку
     },
   },
 

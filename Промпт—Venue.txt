@@ -1,9 +1,0 @@
-
-Create ONLY the Venue section. Content-height.
-
-МЕКЕН-ЖАЙЫМЫЗ:
-[restaurant name] мейрамханасы
-[city], [address]
-
-Button: "Қалай жетуге болады?" — opens map link
-Floral decorations. Scroll reveal animation. All data from config.ts. Show me only this section.
