@@ -1,5 +1,6 @@
 import './styles/global.scss';
 import Hero from './sections/Hero/Hero';
+import Invite from './sections/Invite/Invite';
 import { useMusic } from './hooks/useMusic';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   return (
     <>
       <Hero isMusicPlaying={isPlaying} onMusicToggle={toggle} />
+      <Invite />
     </>
   );
 }

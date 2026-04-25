@@ -1,0 +1,102 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+// ─── Scroll reveal ────────────────────────────────────────────────────────────
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@mixin reveal($delay: 0ms) {
+  opacity: 0;
+  [data-visible="true"] & {
+    animation: reveal-up 700ms $ease-out $delay forwards;
+  }
+}
+
+// ─── Section ──────────────────────────────────────────────────────────────────
+.invite {
+  position: relative;
+  width: 100%;
+  padding-block: $space-3xl;
+  background-color: $color-background;
+  overflow: hidden;
+}
+
+// ─── Container ────────────────────────────────────────────────────────────────
+.container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// ─── Text block ───────────────────────────────────────────────────────────────
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-md;
+  text-align: center;
+}
+
+.greeting {
+  @include reveal(0ms);
+  font-family: $font-display;
+  font-weight: 400;
+  font-size: 2.8rem;
+  line-height: 1.1;
+  color: $color-text;
+}
+
+.line {
+  @include reveal(180ms);
+  font-family: $font-body;
+  font-weight: $font-weight-light;
+  font-size: 1.1rem;
+  color: $color-text-muted;
+  letter-spacing: 0.04em;
+}
+
+.brideName {
+  @include reveal(260ms);
+  font-family: $font-display;
+  font-weight: 400;
+  font-size: 2.8rem;
+  line-height: 1.1;
+  color: $color-text;
+}
+
+.text {
+  @include reveal(340ms);
+  font-family: $font-body;
+  font-weight: $font-weight-light;
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: $color-text;
+  max-width: 340px;
+}
+
+// ─── Photo ────────────────────────────────────────────────────────────────────
+.photoWrap {
+  @include reveal(440ms);
+  width: 100%;
+  max-width: 320px;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.photo {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}

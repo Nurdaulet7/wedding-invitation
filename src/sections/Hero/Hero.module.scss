@@ -29,18 +29,60 @@
   z-index: 1;
   background: linear-gradient(
     to bottom,
-    transparent 30%,
-    rgba(253, 248, 243, 0.15) 60%,
-    rgba(253, 248, 243, 0.85) 100%
+    transparent 25%,
+    rgba(253, 248, 243, 0.3) 55%,
+    rgba(253, 248, 243, 0.75) 75%,
+    #fdf8f3 100%
   );
 }
 
 // ─── Music button ─────────────────────────────────────────────────────────────
-.musicBtn {
+.musicWrap {
   position: absolute;
   top: $space-lg;
   right: $space-lg;
   z-index: 20;
+  width: 96px;
+  height: 96px;
+  @include flex-center;
+}
+
+.musicCircleText {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: spin 12s linear infinite;
+
+  text {
+    font-family: $font-body;
+    font-size: 12px;
+    font-weight: $font-weight-light;
+    letter-spacing: 0.02em;
+    fill: rgb(255, 255, 255);
+  }
+}
+
+// текст останавливается когда музыка играет
+// .musicWrap:has([aria-label="Музыканы өшіру"]) .musicCircleText {
+//   animation-play-state: paused;
+// }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.musicBtn {
+  position: relative;
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
   width: 48px;
   height: 48px;
   border-radius: $radius-full;
@@ -70,7 +112,7 @@
 .musicBtn[aria-label="Музыканы өшіру"]::before {
   content: "";
   position: absolute;
-  inset: -4px;
+  inset: -6px;
   border-radius: $radius-full;
   border: 2px solid rgba(255, 255, 255, 0.5);
   animation: pulse-ring 1.8s $ease-out infinite;
@@ -127,7 +169,7 @@
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  animation: bounce 2s $ease-default infinite;
+  animation: bounce 2.5s $ease-default infinite;
   color: $color-text-muted;
 }
 
@@ -144,11 +186,13 @@
 // }
 
 .scrollArrow {
-  width: 36px;
-  height: 36px;
-  stroke: $color-text-muted;
-  stroke-width: 2;
+  width: 32px;
+  height: 32px;
+  color: $color-text-muted;
+  stroke: currentColor;
   fill: none;
+  opacity: 0.8;
+  z-index: 10;
 }
 
 @keyframes bounce {
