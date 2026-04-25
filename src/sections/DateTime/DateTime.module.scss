@@ -1,0 +1,190 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@mixin reveal($delay: 0ms) {
+  opacity: 0;
+  [data-visible="true"] & {
+    animation: reveal-up 700ms $ease-out $delay forwards;
+  }
+}
+
+// ─── Section ──────────────────────────────────────────────────────────────────
+.section {
+  width: 100%;
+  padding-block: $space-xl;
+  background-color: $color-background;
+}
+
+.container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-md;
+}
+
+// ─── Title ────────────────────────────────────────────────────────────────────
+.title {
+  @include reveal(0ms);
+  font-family: $font-display;
+  font-weight: 400;
+  font-size: 2.8rem;
+  color: $color-text;
+  text-align: center;
+}
+
+// ─── Date card ────────────────────────────────────────────────────────────────
+.card {
+  @include reveal(150ms);
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-xs;
+}
+
+.cardMonth {
+  font-family: $font-body;
+  font-weight: $font-weight-regular;
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: $color-primary;
+}
+
+.cardMiddle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-lg;
+}
+
+.cardBadge {
+  font-family: $font-body;
+  font-weight: $font-weight-light;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  color: $color-text-muted;
+  padding: $space-xs $space-sm;
+  text-align: center;
+  white-space: nowrap;
+  border-top: 1px solid $color-text-muted;
+  border-bottom: 1px solid $color-text-muted;
+  width: 30%;
+}
+
+.cardDay {
+  font-family: $font-display;
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 1;
+  color: $color-text;
+}
+
+.cardYear {
+  font-family: $font-body;
+  font-weight: $font-weight-light;
+  font-size: 1rem;
+  letter-spacing: 0.16em;
+  color: $color-text-muted;
+}
+
+// ─── Calendar ─────────────────────────────────────────────────────────────────
+.calendar {
+  @include reveal(300ms);
+  width: 100%;
+  max-width: 320px;
+}
+
+.calHeader {
+  font-family: $font-body;
+  font-weight: $font-weight-medium;
+  font-size: 1rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $color-text-muted;
+  text-align: center;
+  margin-bottom: $space-md;
+}
+
+.calGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calWeekday {
+  font-family: $font-body;
+  font-weight: $font-weight-medium;
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  color: $color-primary;
+  text-align: center;
+  padding-bottom: $space-xs;
+}
+
+.calDay,
+.calEmpty,
+.calEventDay {
+  font-family: $font-body;
+  font-size: 0.85rem;
+  aspect-ratio: 1;
+  border-radius: $radius-full;
+  line-height: 1;
+  @include flex-center;
+}
+
+.calDay {
+  font-weight: $font-weight-regular;
+  color: $color-text-muted;
+}
+
+.calEmpty {
+  visibility: hidden;
+}
+
+.calEventDay {
+  position: relative;
+  @include flex-center;
+}
+
+.calEventOrn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140%;
+  height: 140%;
+  transform-origin: center center;
+  color: $color-primary;
+  animation: spin-cal 8s linear infinite;
+}
+
+.calEventNum {
+  position: relative;
+  font-weight: $font-weight-semibold;
+  font-size: 0.85rem;
+  color: $color-primary;
+  z-index: 1;
+}
+
+@keyframes spin-cal {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
