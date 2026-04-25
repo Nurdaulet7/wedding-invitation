@@ -34,6 +34,10 @@ export const config = {
     deadline: "2026-08-01" as const, // ISO date
     phone: "", // WhatsApp / phone number
     formLink: "", // Google Form or custom form link
+    telegram: {
+      botToken: import.meta.env.VITE_TELEGRAM_BOT_TOKEN as string ?? "",
+      chatId: import.meta.env.VITE_TELEGRAM_CHAT_ID as string ?? "",
+    },
   },
 
   dress_code: {

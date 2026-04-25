@@ -5,6 +5,7 @@ import DateTime from './sections/DateTime/DateTime';
 import Venue from './sections/Venue/Venue';
 import Countdown from './sections/Countdown/Countdown';
 import Hosts from './sections/Hosts/Hosts';
+import RSVP from './sections/RSVP/RSVP';
 import OrnamentDivider from './components/OrnamentDivider/OrnamentDivider';
 import { useMusic } from './hooks/useMusic';
 
@@ -21,6 +22,8 @@ function App() {
       <Venue />
       <Countdown />
       <Hosts />
+      <OrnamentDivider />
+      <RSVP />
     </>
   );
 }
