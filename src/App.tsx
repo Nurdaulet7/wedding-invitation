@@ -3,6 +3,7 @@ import Hero from './sections/Hero/Hero';
 import Invite from './sections/Invite/Invite';
 import DateTime from './sections/DateTime/DateTime';
 import Venue from './sections/Venue/Venue';
+import Countdown from './sections/Countdown/Countdown';
 import OrnamentDivider from './components/OrnamentDivider/OrnamentDivider';
 import { useMusic } from './hooks/useMusic';
 
@@ -17,6 +18,7 @@ function App() {
       <DateTime />
       <OrnamentDivider />
       <Venue />
+      <Countdown />
     </>
   );
 }

@@ -1,0 +1,9 @@
+Create ONLY the Toy Ieleri (hosts) section. Content-height.
+
+ Scroll reveal animation.
+
+ТОЙ ИЕЛЕРІ:
+[Father name] - [Mother name]
+
+All text from config.ts. Show me only this section.
+используй орнаменты top bottom 

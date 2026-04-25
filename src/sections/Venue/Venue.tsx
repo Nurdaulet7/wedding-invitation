@@ -1,6 +1,5 @@
 import { MapPin } from 'lucide-react';
 import { config } from '../../data/config';
-import { CenterOrnament } from '../../components/ornaments/CenterOrnament';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import styles from './Venue.module.scss';
 
@@ -9,8 +8,6 @@ export default function Venue() {
 
   return (
     <section className={styles.section} ref={ref}>
-      <CenterOrnament style={{ top: 'auto', bottom: '-90px', left: 'auto', right: '-90px', transform: 'none' }} />
-
       <div className={styles.container}>
         <p className={styles.label}>Мекен-жайымыз</p>
 
