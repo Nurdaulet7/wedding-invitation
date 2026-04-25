@@ -1,0 +1,57 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@mixin reveal($delay: 0ms) {
+  opacity: 0;
+  [data-visible='true'] & {
+    animation: reveal-up 700ms $ease-out $delay forwards;
+  }
+}
+
+.section {
+  width: 100%;
+  padding-block: $space-xl;
+  background-color: $color-background;
+}
+
+.container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-md;
+  text-align: center;
+}
+
+.ornament {
+  width: 100%;
+  max-width: 160px;
+  opacity: 0.45;
+
+  &:first-child { @include reveal(0ms); }
+  &:last-child  { @include reveal(400ms); }
+}
+
+.text {
+  @include reveal(100ms);
+  font-family: $font-display;
+  font-weight: 400;
+  font-size: 2.6rem;
+  line-height: 1.2;
+  color: $color-text;
+}
+
+.subtext {
+  @include reveal(200ms);
+  font-family: $font-body;
+  font-weight: $font-weight-light;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: $color-text-muted;
+  max-width: 28ch;
+}
