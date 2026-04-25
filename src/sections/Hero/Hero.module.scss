@@ -1,0 +1,162 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+// ─── Background photo ─────────────────────────────────────────────────────────
+.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 0;
+}
+
+// ─── Gradient overlay ─────────────────────────────────────────────────────────
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    transparent 30%,
+    rgba(253, 248, 243, 0.15) 60%,
+    rgba(253, 248, 243, 0.85) 100%
+  );
+}
+
+// ─── Music button ─────────────────────────────────────────────────────────────
+.musicBtn {
+  position: absolute;
+  top: $space-lg;
+  right: $space-lg;
+  z-index: 20;
+  width: 48px;
+  height: 48px;
+  border-radius: $radius-full;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  @include flex-center;
+  transition:
+    background $transition-base,
+    transform $transition-base;
+  cursor: pointer;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  &:active {
+    transform: scale(0.92);
+    background: rgba(255, 255, 255, 0.35);
+  }
+}
+
+// пульсирующее кольцо когда музыка играет
+.musicBtn[aria-label="Музыканы өшіру"]::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: $radius-full;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  animation: pulse-ring 1.8s $ease-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+// ─── Bottom content ───────────────────────────────────────────────────────────
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: $space-xs;
+  gap: $space-sm;
+  @include fade-up(900ms, 300ms);
+}
+
+.name {
+  font-family: $font-display;
+  font-weight: 400;
+  font-size: 4.5rem;
+  line-height: 1.05;
+  color: $color-text;
+  text-align: center;
+}
+
+.subtitle {
+  font-family: $font-display;
+  font-weight: 400;
+  font-size: 4.2rem;
+  line-height: 1.2;
+  color: $color-text;
+  text-align: center;
+}
+
+// ─── Scroll indicator ─────────────────────────────────────────────────────────
+.scroll {
+  margin-top: $space-lg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  animation: bounce 2s $ease-default infinite;
+  color: $color-text-muted;
+}
+
+// .scrollLine {
+//   display: block;
+//   width: 1.5px;
+//   height: 36px;
+//   background: linear-gradient(
+//     to bottom,
+//     rgba(44, 44, 44, 0),
+//     rgba(44, 44, 44, 0.5)
+//   );
+//   border-radius: 2px;
+// }
+
+.scrollArrow {
+  width: 36px;
+  height: 36px;
+  stroke: $color-text-muted;
+  stroke-width: 2;
+  fill: none;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}

@@ -1,13 +1,10 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-// ─── Google Fonts (Great Vibes fallback only) ────────────────────────────────
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
-
 // ─── Local fonts ──────────────────────────────────────────────────────────────
 @font-face {
-  font-family: "KZ Nautilus";
-  src: url("../assets/fonts/KZ_Nautilus.woff2") format("woff2");
+  font-family: "Qazaq SC";
+  src: url("../assets/fonts/QazaqSC.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -39,7 +36,8 @@
 
 @font-face {
   font-family: "Montserrat Alternates";
-  src: url("../assets/fonts/MontserratAlternates-SemiBold.woff2") format("woff2");
+  src: url("../assets/fonts/MontserratAlternates-SemiBold.woff2")
+    format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;

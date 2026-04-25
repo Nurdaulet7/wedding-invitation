@@ -4,8 +4,8 @@
 export const config = {
   couple: {
     person1: {
-      name: 'Айдана',
-      nameEn: 'Aidana',
+      name: 'Аяулым',
+      nameEn: 'Ayaulym',
     },
     person2: {
       name: 'Арман',
