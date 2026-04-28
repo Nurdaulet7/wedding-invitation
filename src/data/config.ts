@@ -19,8 +19,8 @@ export const config = {
 
     date: "2026-06-05" as const, // ISO date — used for countdown
     dateDisplay: "5 маусым 2026", // Displayed on the site
-    time: "17:00",
-    timeDisplay: "17:00",
+    time: "18:00",
+    timeDisplay: "18:00",
 
     venue: {
       name: "Hayat Palace ресторан",
