@@ -51,6 +51,17 @@ export const config = {
     mother: "Ляззат",
   },
 
+  /** Фото: `public/gallery/photo1.PNG` … `photo7.PNG` — можно менять файлы без сборки */
+  gallery: [
+    "/gallery/photo1.PNG",
+    "/gallery/photo2.PNG",
+    "/gallery/photo3.PNG",
+    "/gallery/photo4.PNG",
+    "/gallery/photo5.PNG",
+    "/gallery/photo6.PNG",
+    "/gallery/photo7.PNG",
+  ],
+
   invite: {
     greeting: "Құрметті қонақтар!",
     brideName: "Айдананың",

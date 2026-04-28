@@ -1,20 +1,13 @@
 import { useState, useRef } from 'react';
-import img1 from '../../assets/img1.PNG';
-import img2 from '../../assets/img2.PNG';
-import img3 from '../../assets/img3.PNG';
-import img4 from '../../assets/img4.PNG';
-import img5 from '../../assets/img5.PNG';
-import img6 from '../../assets/img6.PNG';
-import img7 from '../../assets/img7.PNG';
+import { config } from '../../data/config';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import styles from './Gallery.module.scss';
-
-const photos = [img1, img2, img3, img4, img5, img6, img7];
 
 export default function Gallery() {
   const ref = useScrollReveal<HTMLElement>(0.1);
   const [current, setCurrent] = useState(0);
   const touchStartX = useRef<number | null>(null);
+  const photos = config.gallery;
 
   function prev() {
     setCurrent(i => (i - 1 + photos.length) % photos.length);
