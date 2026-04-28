@@ -4,8 +4,8 @@
 export const config = {
   couple: {
     person1: {
-      name: "Аяулым",
-      nameEn: "Ayaulym",
+      name: "Айдана",
+      nameEn: "Aidana",
     },
     person2: {
       name: "Арман",
@@ -17,21 +17,21 @@ export const config = {
     title: "Біздің үйлену тойымызға шақырамыз",
     titleEn: "We invite you to our wedding",
 
-    date: "2026-08-15" as const, // ISO date — used for countdown
-    dateDisplay: "15 тамыз 2026", // Displayed on the site
+    date: "2026-06-05" as const, // ISO date — used for countdown
+    dateDisplay: "5 маусым 2026", // Displayed on the site
     time: "17:00",
     timeDisplay: "17:00",
 
     venue: {
-      name: "Grand Hall мейрамханасы",
-      address: "Алматы қ., Абай д., 1",
-      addressEn: "Almaty, Abay ave., 1",
-      mapLink: "https://2gis.kz", // замени на реальную ссылку
+      name: "Hayat Palace ресторан",
+      address: "Қызылорда, Демесинова көшесі 57",
+      addressEn: "Kyzylorda, Demesinova street 57",
+      mapLink: "https://2gis.kz/kyzylorda/search/%D0%94%D0%B5%D0%BC%D0%B5%D1%81%D0%B8%D0%BD%D0%BE%D0%B2%D0%B0%2057/firm/70000001062710966/65.500147%2C44.825293",
     },
   },
 
   rsvp: {
-    deadline: "2026-08-01" as const, // ISO date
+    deadline: "2026-05-25" as const, // ISO date
     phone: "", // WhatsApp / phone number
     formLink: "", // Google Form or custom form link
     telegram: {
@@ -47,27 +47,19 @@ export const config = {
   },
 
   hosts: {
-    father: "Арман",
-    mother: "Сәуле",
+    father: "Мейрамбек",
+    mother: "Ляззат",
   },
 
   invite: {
     greeting: "Құрметті қонақтар!",
-    brideName: "Аяулымның",
+    brideName: "Айдананың",
     body: "Сіздерді аяулы қызымыз\nАминаның\nАта-ананың аялы алақанынан Ақ босағасына шығарып салуға арналған салтанатты дастарханымыздың қадірлі қонағы болуға шақырамыз!",
   },
 
-  gallery: [
-    "/gallery/photo1.png",
-    "/gallery/photo2.png",
-    "/gallery/photo3.png",
-    "/gallery/photo4.png",
-    // добавляй сюда пути к фото в папке public/gallery/
-  ],
-
   meta: {
-    title: "Айдана & Арман — Үйлену тойы",
-    description: "Біздің үйлену тойымызға шақырамыз — 15 тамыз 2026",
+    title: "Айдана — ұзату тойы",
+    description: "Біздің үйлену тойымызға шақырамыз — 5 маусым 2026",
     ogImage: "/og-image.jpg",
   },
 } as const;

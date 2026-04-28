@@ -1,5 +1,5 @@
 import { config } from '../../data/config';
-import heroImg from '../../assets/hero.png';
+import heroImg from '../../assets/img5.PNG';
 import { CenterOrnament } from '../../components/ornaments/CenterOrnament';
 import { CornerOrnament2 } from '../../components/ornaments/CornerOrnament2';
 import { useScrollReveal } from '../../hooks/useScrollReveal';

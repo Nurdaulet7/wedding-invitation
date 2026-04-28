@@ -1,5 +1,5 @@
 import { config } from '../../data/config';
-import heroImg from '../../assets/hero.png';
+import heroImg from '../../assets/img7.PNG';
 import { useCountdown } from '../../hooks/useCountdown';
 import styles from './Countdown.module.scss';
 

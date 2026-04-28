@@ -1,6 +1,6 @@
 import ArrowDown from '../../assets/arrow-down.svg?react';
 import { config } from '../../data/config';
-import heroImg from '../../assets/hero.png';
+import heroImg from '../../assets/img1.PNG';
 import styles from './Hero.module.scss';
 
 interface HeroProps {

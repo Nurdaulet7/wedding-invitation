@@ -25,11 +25,12 @@ export default function RSVP() {
     setStatus('loading');
 
     const attendanceText = form.attendance === 'coming' ? 'Келемін' : 'Өкінішке орай, қатыса алмаймын';
+    const attendanceIcon = form.attendance === 'coming' ? '✅' : '❌';
     const text =
-      `📩 RSVP\n\n` +
+      `📩 Тойға келу туралы хабарлама\n\n` +
       `👤 ${form.name}\n` +
       `👥 Адам саны: ${form.guests}\n` +
-      `✅ ${attendanceText}`;
+      `${attendanceIcon} ${attendanceText}`;
 
     const { botToken, chatId } = config.rsvp.telegram;
     if (!botToken || !chatId) {
