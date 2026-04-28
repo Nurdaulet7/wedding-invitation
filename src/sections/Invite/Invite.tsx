@@ -4,7 +4,7 @@ import { CornerOrnament2 } from '../../components/ornaments/CornerOrnament2';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import styles from './Invite.module.scss';
 
-const heroImg = '/gallery/photo5.PNG';
+const heroImg = '/gallery/photo5.png';
 
 export default function Invite() {
   const ref = useScrollReveal<HTMLElement>(0.15);

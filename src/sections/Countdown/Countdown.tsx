@@ -2,7 +2,7 @@ import { config } from '../../data/config';
 import { useCountdown } from '../../hooks/useCountdown';
 import styles from './Countdown.module.scss';
 
-const heroImg = '/gallery/photo7.PNG';
+const heroImg = '/gallery/photo7.png';
 
 const pad = (n: number) => String(n).padStart(2, '0');
 

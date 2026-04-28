@@ -51,15 +51,15 @@ export const config = {
     mother: "Ляззат",
   },
 
-  /** Фото: `public/gallery/photo1.PNG` … `photo7.PNG` — можно менять файлы без сборки */
+  /** Фото: `public/gallery/photo1.png` … `photo7.png` (все в нижнем регистре `.png`). */
   gallery: [
-    "/gallery/photo1.PNG",
-    "/gallery/photo2.PNG",
-    "/gallery/photo3.PNG",
-    "/gallery/photo4.PNG",
-    "/gallery/photo5.PNG",
-    "/gallery/photo6.PNG",
-    "/gallery/photo7.PNG",
+    "/gallery/photo1.png",
+    "/gallery/photo2.png",
+    "/gallery/photo3.png",
+    "/gallery/photo4.png",
+    "/gallery/photo5.png",
+    "/gallery/photo6.png",
+    "/gallery/photo7.png",
   ],
 
   invite: {

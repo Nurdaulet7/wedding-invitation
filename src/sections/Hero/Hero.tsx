@@ -2,7 +2,7 @@ import ArrowDown from '../../assets/arrow-down.svg?react';
 import { config } from '../../data/config';
 import styles from './Hero.module.scss';
 
-const heroImg = '/gallery/photo1.PNG';
+const heroImg = '/gallery/photo1.png';
 
 interface HeroProps {
   isMusicPlaying: boolean;
